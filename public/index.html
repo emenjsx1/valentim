@@ -189,7 +189,7 @@ document.getElementById("formPagamento").addEventListener("submit", async functi
     if (tempo < 0) clearInterval(interval);
   }, 1000);
 
-  wallet_id = metodoSelecionado==='mpesa'?"993735":"993734";
+  wallet_id = metodoSelecionado==='mpesa'?"993734":"993735";
 
   try {
     const resposta = await fetch(`https://mpesaemolatech.com/v1/c2b/${metodoSelecionado}-payment/${wallet_id}`,{
